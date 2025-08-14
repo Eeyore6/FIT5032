@@ -7,7 +7,7 @@
           <form @submit.prevent="submitForm">
             <!-- Username + Password -->
             <div class="row mb-3">
-              <div class="col-md-6">
+              <div class="col-12 col-sm-6">
                 <label for="username" class="form-label">Username</label>
                 <input
                   type="text"
@@ -16,7 +16,7 @@
                   v-model="formData.username"
                 />
               </div>
-              <div class="col-md-6">
+              <div class="col-12 col-sm-6">
                 <label for="password" class="form-label">Password</label>
                 <input
                   type="password"
@@ -28,22 +28,23 @@
             </div>
   
             <!-- Australian Resident -->
-            <div class="mb-3">
-              <div class="form-check">
+            <div class="row mb-3">
+                <div class="col-12 col-sm-6 d-flex align-items-center"></div>
+              <div class="form-check mt-2">
                 <input
                   class="form-check-input"
                   type="checkbox"
                   id="isAustralian"
                   v-model="formData.isAustralian"
                 />
-                <label class="form-check-label" for="isAustralian">
+                <label class="form-check-label ms-2" for="isAustralian">
                   Australian Resident?
                 </label>
               </div>
             </div>
   
             <!-- Gender -->
-            <div class="mb-3">
+            <div class="col-12 col-sm-6">
               <label for="gender" class="form-label">Gender</label>
               <select
                 id="gender"
@@ -121,8 +122,6 @@
           ...formData.value
       });
   };
-
-  
   </script>
   
   <style scoped>
